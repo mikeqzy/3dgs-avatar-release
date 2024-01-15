@@ -1,0 +1,27 @@
+# @package _global_
+
+dataset_name: ps_female_3
+
+dataset:
+  name: people_snapshot
+  root_dir: "../../data/peoplesnapshot_arah-format/people_snapshot_public"
+  subject: female-3-casual
+
+  train_frames: [ 0, 446, 4 ]
+  val_frames: [ 446, 447, 4 ]
+  test_frames:
+    pose: [446, 648, 4]
+    all: [0, 648, 1]
+  predict_frames: [0, 0, 1]
+
+  img_hw:
+    - 540
+    - 540
+
+  resolution: -1
+  white_background: false
+  data_device: cuda
+  eval: false
+
+opt:
+  densify_grad_threshold: 0.0001

@@ -1,0 +1,9 @@
+# @package _global_
+
+non_rigid_name: identity
+
+model:
+  deformer:
+    non_rigid:
+      name: identity
+      delay: 0

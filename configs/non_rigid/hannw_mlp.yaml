@@ -1,0 +1,31 @@
+# @package _global_
+
+non_rigid_name: hannw_mlp
+
+model:
+  deformer:
+    non_rigid:
+      name: hannw_mlp
+      scale_offset: logit
+      rot_offset: add
+      pose_encoder:
+        num_joints: 24
+        rel_joints: false
+        dim_per_joint: 6
+        out_dim: -1
+      mlp:
+        n_neurons: 256
+        n_hidden_layers: 8
+        skip_in: [ 4 ]
+        cond_in: [ 0 ]
+        multires: 6
+
+        embedder:
+          kick_in_iter: 3000
+          full_band_iter: 10000
+
+opt:
+  lambda_nr_xyz: 0.
+  lambda_nr_scale: 0.
+  lambda_nr_rot: 0.
+  non_rigid_lr: 0.001

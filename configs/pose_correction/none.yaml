@@ -1,0 +1,10 @@
+# @package _global_
+
+pose_name: none
+
+dataset:
+  train_smpl: false
+
+model:
+  pose_correction:
+    name: none

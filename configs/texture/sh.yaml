@@ -1,0 +1,15 @@
+# @package _global_
+
+texture_name: sh
+
+model:
+  gaussian:
+    use_sh: true
+    sh_degree: 3
+  texture:
+    name: sh2rgb
+    cano_view_dir: true
+    view_noise: 45
+
+    non_rigid_dim: 0
+

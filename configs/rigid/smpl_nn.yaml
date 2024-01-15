@@ -1,0 +1,8 @@
+# @package _global_
+
+rigid_name: smpl_nn
+
+model:
+  deformer:
+    rigid:
+      name: smpl_nn

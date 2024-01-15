@@ -1,0 +1,26 @@
+# @package _global_
+
+rigid_name: mlp_field
+
+model:
+  deformer:
+    rigid:
+      name: skinning_field
+
+      distill: false
+      res: 64
+      z_ratio: 4
+      d_out: 25
+      soft_blend: 20
+      n_reg_pts: 1024
+      skinning_network:
+        otype: VanillaMLP
+        n_neurons: 128
+        n_hidden_layers: 4
+        skip_in: []
+        cond_in: []
+        multires: 0
+
+opt:
+  lambda_skinning: [10,1000,0.1]
+  rigid_lr: 1e-4

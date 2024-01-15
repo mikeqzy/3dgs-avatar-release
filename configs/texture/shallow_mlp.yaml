@@ -1,0 +1,34 @@
+# @package _global_
+
+texture_name: shallow_mlp
+
+model:
+  gaussian:
+    use_sh: false
+    feature_dim: 32
+  texture:
+    name: mlp
+
+    feature_dim: ${model.gaussian.feature_dim}
+    use_xyz: false
+    use_cov: false
+    use_normal: false
+    sh_degree: 3
+    non_rigid_dim: 16
+    latent_dim: 16
+
+    cano_view_dir: true
+    view_noise: 45
+
+    mlp:
+      n_neurons: 64
+      n_hidden_layers: 2
+      skip_in: []
+      cond_in: []
+      multires: 0
+
+opt:
+  feature_lr: 1e-3
+  texture_lr: 1e-3
+  tex_latent_lr: 1e-3
+  latent_weight_decay: 0.05

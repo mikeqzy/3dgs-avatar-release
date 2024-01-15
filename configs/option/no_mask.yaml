@@ -1,0 +1,5 @@
+# @package _global_
+
+opt:
+  lambda_mask: 0.
+  lambda_opacity: 1e-3

@@ -1,0 +1,8 @@
+# @package _global_
+
+rigid_name: identity
+
+model:
+  deformer:
+    rigid:
+      name: identity

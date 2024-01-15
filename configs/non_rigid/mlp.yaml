@@ -1,0 +1,38 @@
+# @package _global_
+
+non_rigid_name: mlp
+
+model:
+  deformer:
+    non_rigid:
+      name: mlp
+      scale_offset: logit
+      rot_offset: mult
+
+      delay: 3000
+#      delay: 0
+
+      feature_dim: ${model.texture.non_rigid_dim}
+      latent_dim: 0
+      pose_encoder:
+        num_joints: 24
+        rel_joints: false
+        dim_per_joint: 6
+        out_dim: -1
+      mlp:
+        n_neurons: 256
+        n_hidden_layers: 8
+        skip_in: [ 4 ]
+        cond_in: [ 0 ]
+        multires: 6
+
+        last_layer_init: false
+
+opt:
+#  lambda_nr_xyz: 1e-2
+  lambda_nr_xyz: 0.
+#  lambda_nr_scale: 1e-4
+  lambda_nr_scale: 0.
+  lambda_nr_rot: 0.
+  non_rigid_lr: 1e-3
+  nr_latent_lr: 1e-3

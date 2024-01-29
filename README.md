@@ -31,6 +31,7 @@ git clone --recursive https://github.com/mikeqzy/3dgs-avatar-release.git
 or
 ```
 git clone https://github.com/mikeqzy/3dgs-avatar-release.git
+cd 3dgs-avatar-release
 git submodule update --init --recursive
 ```
 

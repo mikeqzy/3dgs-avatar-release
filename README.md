@@ -3,7 +3,7 @@
 
 <img src="assets/teaser.gif" width="800"/> 
 
-This repository contains the implementation of our paper
+This repository contains the implementation of the CVPR 2024 submission 
 [3DGS-Avatar: Animatable Avatars via Deformable 3D Gaussian Splatting](https://arxiv.org/abs/2312.09228).
 
 You can find detailed usage instructions for using pretrained models and training your own models below.
@@ -14,8 +14,8 @@ If you find our code useful, please cite:
 @article{qian20233dgsavatar,
    title={3DGS-Avatar: Animatable Avatars via Deformable 3D Gaussian Splatting}, 
    author={Zhiyin Qian and Shaofei Wang and Marko Mihajlovic and Andreas Geiger and Siyu Tang},
-   journal={arXiv preprint arXiv:2312.09228},
-   year={2023},
+   booktitle={CVPR},
+   year={2024},
 }
 ```
 

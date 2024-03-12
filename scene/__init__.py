@@ -83,5 +83,5 @@ class Scene:
         (gaussian_params, converter_sd, converter_opt_sd, converter_scd_sd, first_iter) = torch.load(path)
         self.gaussians.restore(gaussian_params, self.cfg.opt)
         self.converter.load_state_dict(converter_sd)
-        self.converter.optimizer.load_state_dict(converter_opt_sd)
-        self.converter.scheduler.load_state_dict(converter_scd_sd)
+        # self.converter.optimizer.load_state_dict(converter_opt_sd)
+        # self.converter.scheduler.load_state_dict(converter_scd_sd)

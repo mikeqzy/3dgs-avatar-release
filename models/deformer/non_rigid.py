@@ -97,8 +97,8 @@ class MLP(NonRigidDeform):
             deformed_gaussians._rotation = gaussians._rotation + delta_rot
         elif rot_offset == 'mult':
             q1 = delta_rot
-            q1[0] = 1. # [1,0,0,0] represents identity rotation
-            delta_rot = delta_rot[1:]
+            q1[:, 0] = 1. # [1,0,0,0] represents identity rotation
+            delta_rot = delta_rot[:, 1:]
             q2 = gaussians._rotation
             # deformed_gaussians._rotation = quaternion_multiply(q1, q2)
             deformed_gaussians._rotation = tf.quaternion_multiply(q1, q2)
@@ -167,8 +167,8 @@ class HannwMLP(NonRigidDeform):
             deformed_gaussians._rotation = gaussians._rotation + delta_rot
         elif rot_offset == 'mult':
             q1 = delta_rot
-            q1[0] = 1.  # [1,0,0,0] represents identity rotation
-            delta_rot = delta_rot[1:]
+            q1[:, 0] = 1.  # [1,0,0,0] represents identity rotation
+            delta_rot = delta_rot[:, 1:]
             q2 = gaussians._rotation
             deformed_gaussians._rotation = quaternion_multiply(q1, q2)
         else:
@@ -262,8 +262,8 @@ class HashGridwithMLP(NonRigidDeform):
             deformed_gaussians._rotation = gaussians._rotation + delta_rot
         elif rot_offset == 'mult':
             q1 = delta_rot
-            q1[0] = 1.  # [1,0,0,0] represents identity rotation
-            delta_rot = delta_rot[1:]
+            q1[:, 0] = 1.  # [1,0,0,0] represents identity rotation
+            delta_rot = delta_rot[:, 1:]
             q2 = gaussians._rotation
             # deformed_gaussians._rotation = quaternion_multiply(q1, q2)
             deformed_gaussians._rotation = tf.quaternion_multiply(q1, q2)
